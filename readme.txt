@@ -18,5 +18,4 @@ GET {hostname}:{port}/{customerId}/session
 POST {hostname}:{port}/{betOfferId}/stake?sessionKey={sessionKey}
 
 3. get the top 20 highest stakes
-
 GET {hostname}:{port}/{betOfferId}/highstakes
