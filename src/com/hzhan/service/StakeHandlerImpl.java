@@ -18,17 +18,18 @@ public class StakeHandlerImpl implements StakeHandler {
                 // map with stake, and put the maximum into the map
                 .merge(customerId, stake, Math::max);
 
-        for(Map.Entry<Integer, Map<Integer, Integer>> entry : betOffers.entrySet()) {
-            int offerId = entry.getKey();
-            Map<Integer, Integer> offer = entry.getValue();
-
-            // this console print is used to test purpose, and it can be removed in production env
-            System.out.println("offerId: {" + offerId);
-            for(Map.Entry<Integer, Integer> item : offer.entrySet()) {
-                System.out.println("customerId: " + item.getKey() + ", stake: " + item.getValue());
-            }
-            System.out.println("}");
-        }
+        //this is for the test print
+//        for(Map.Entry<Integer, Map<Integer, Integer>> entry : betOffers.entrySet()) {
+//            int offerId = entry.getKey();
+//            Map<Integer, Integer> offer = entry.getValue();
+//
+//            // this console print is used to test purpose, and it can be removed in production env
+//            System.out.println("offerId: {" + offerId);
+//            for(Map.Entry<Integer, Integer> item : offer.entrySet()) {
+//                System.out.println("customerId: " + item.getKey() + ", stake: " + item.getValue());
+//            }
+//            System.out.println("}");
+//        }
     }
 
     @Override

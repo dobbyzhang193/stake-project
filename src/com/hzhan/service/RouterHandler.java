@@ -82,7 +82,7 @@ public class RouterHandler implements HttpHandler {
     public void sessionHandler(HttpExchange exchange, int customerId, SessionHandler sessionHandler) {
         Session session = sessionHandler.getOrCreatSession(customerId);
         HttpUtil.sendResponse(exchange, HttpStatusCode.OK, session.getKey());
-        sessionHandler.testPrint();
+        //sessionHandler.testPrint();
     }
 
     public void stakeHandler(HttpExchange exchange, int betOfferId) {
@@ -114,8 +114,7 @@ public class RouterHandler implements HttpHandler {
     }
 
     public void highStakesHandler(HttpExchange exchange, int betOfferId) {
-        System.out.println("the bet offer id is:" + betOfferId);
-
+        //System.out.println("the bet offer id is:" + betOfferId);
         List<Map.Entry<Integer, Integer>> res = stakeHandler.getHighestStakes(betOfferId);
 
         if(res == null) {
